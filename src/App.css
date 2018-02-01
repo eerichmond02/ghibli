@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.films {
+display: flex;
+flex-direction: row;
+}
+
+.filminfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+img:hover{
+  cursor: pointer;
+}
+
+.filmdesc {
+  text-align: left;
+}
+
+button {
+  height: fit-content;
+  margin-top: 15px;
+}
