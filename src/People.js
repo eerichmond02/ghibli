@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
-import maleAvatar from './Ghibli-Assignment-Assets/Male-Avatar.png';
-import femaleAvatar from './Ghibli-Assignment-Assets/Female-Avatar.png';
 import { peopleFetchData, filmFetchData } from './state/actions'
 import './ui-toolkit/css/nm-cx/main.css' /* Need to copy this */
 import Person from './Person'
@@ -21,9 +19,7 @@ class People extends Component {
 			return (
 				<div className="people">
 	      	{this.props.people.map(person =>  (
-	      			//<Person onClick={() => {this.props.filmFetchData(person.films)}} person={person} key={person.id}/>
-		      		person.gender === 'Male' ? <img src={maleAvatar} alt={person.name} title={person.name} key={person.id} onClick={() => {this.props.filmFetchData(person.films)}}/> 
-		      		: <img src={femaleAvatar} alt={person.name} title={person.name} key={person.id} onClick={() => {this.props.filmFetchData(person.films)}}/>
+	      			<Person person={person} key={person.id}/>
 	      	))}
 				</div>
 			);
@@ -47,6 +43,7 @@ const mapDispatchToProps = (dispatch) => {
 				dispatch(peopleFetchData());
 			},
 			filmFetchData: (films) => {
+				console.log(filmFetchData);
 				dispatch(filmFetchData(films));
 			}
     }

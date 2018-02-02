@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
 
 .App-logo {
@@ -8,7 +10,9 @@
 }
 
 .App-title {
-  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
 }
 
 .App-intro {
@@ -32,10 +36,6 @@ flex-direction: row;
   margin-right: 25px;
 }
 
-img:hover{
-  cursor: pointer;
-}
-
 .filmdesc {
   text-align: left;
 }
@@ -45,6 +45,18 @@ button {
   margin-top: 15px;
 }
 
-/*.inline {
-  display: inline-block;
-}*/
+.name{
+  font-size: 10px;
+  line-height: 100%;
+}
+
+.personInfo {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
